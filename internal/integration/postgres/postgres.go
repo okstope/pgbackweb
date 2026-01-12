@@ -147,7 +147,7 @@ func (Client) Dump(
 		pickedParams = params[0]
 	}
 
-	args := []string{connString}
+	args := []string{connString, "-Fc"}
 	if pickedParams.DataOnly {
 		args = append(args, "--data-only")
 	}
