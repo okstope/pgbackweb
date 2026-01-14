@@ -146,6 +146,7 @@ func (Client) Dump(
 	if len(params) > 0 {
 		pickedParams = params[0]
 	}
+_ = pickedParams // добавить после объявления
 
 	args := []string{connString, "-Fc "}
 
