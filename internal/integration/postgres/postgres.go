@@ -147,25 +147,8 @@ func (Client) Dump(
 		pickedParams = params[0]
 	}
 
-	args := []string{connString, "-Fc"}
-	if pickedParams.DataOnly {
-		args = append(args, "--data-only")
-	}
-	if pickedParams.SchemaOnly {
-		args = append(args, "--schema-only")
-	}
-	if pickedParams.Clean {
-		args = append(args, "--clean")
-	}
-	if pickedParams.IfExists {
-		args = append(args, "--if-exists")
-	}
-	if pickedParams.Create {
-		args = append(args, "--create")
-	}
-	if pickedParams.NoComments {
-		args = append(args, "--no-comments")
-	}
+	args := []string{connString, "-Fc "}
+
 
 	errorBuffer := &bytes.Buffer{}
 	reader, writer := io.Pipe()

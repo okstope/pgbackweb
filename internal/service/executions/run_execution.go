@@ -110,7 +110,7 @@ func (s *Service) RunExecution(ctx context.Context, backupID uuid.UUID) error {
 
 	date := time.Now().Format(timeutil.LayoutSlashYYYYMMDD)
 	file := fmt.Sprintf(
-		"dump-%s-%s.zip",
+		"dump-%s-%s.dump",
 		time.Now().Format(timeutil.LayoutYYYYMMDDHHMMSS),
 		uuid.NewString(),
 	)
