@@ -148,7 +148,7 @@ func (Client) Dump(
 	}
 _ = pickedParams // добавить после объявления
 
-	args := []string{connString, "-Fc"}
+	args := []string{connString, "-Fc", "--exclude-extension=*"}
 
 
 	errorBuffer := &bytes.Buffer{}
